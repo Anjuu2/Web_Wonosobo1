@@ -22,4 +22,25 @@ window.addEventListener("scroll", function () {
 
 console.log("carouselBottom:", carouselBottom, "scrollY:", window.scrollY);
 
+const scrollContainer = document.getElementById('scroll-section');
 
+// Set scroll to middle on load
+window.addEventListener('load', () => {
+  const middle = scrollContainer.scrollWidth / 2 - scrollContainer.clientWidth / 2;
+  scrollContainer.scrollLeft = middle;
+});
+
+// Reset to middle if near ends
+scrollContainer.addEventListener('scroll', () => {
+  const scrollLeft = scrollContainer.scrollLeft;
+  const maxScroll = scrollContainer.scrollWidth;
+  const containerWidth = scrollContainer.clientWidth;
+
+  if (scrollLeft < 50) {
+    scrollContainer.scrollLeft = maxScroll / 2 - containerWidth;
+  }
+
+  if (scrollLeft + containerWidth > maxScroll - 50) {
+    scrollContainer.scrollLeft = maxScroll / 2 - containerWidth;
+  }
+});
