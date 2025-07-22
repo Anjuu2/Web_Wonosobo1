@@ -20,27 +20,44 @@ window.addEventListener("scroll", function () {
   }
 });
 
-console.log("carouselBottom:", carouselBottom, "scrollY:", window.scrollY);
 
-const scrollContainer = document.getElementById('scroll-section');
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('#carouselUMKM1');
+  const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
 
-// Set scroll to middle on load
-window.addEventListener('load', () => {
-  const middle = scrollContainer.scrollWidth / 2 - scrollContainer.clientWidth / 2;
-  scrollContainer.scrollLeft = middle;
+  const accordionItems = document.querySelectorAll('#nestedAccordion1 .accordion-item');
+
+  accordionItems.forEach(item => {
+    const slideKey = item.getAttribute('data-target-slide');
+    const collapse = item.querySelector('.accordion-collapse');
+
+    collapse.addEventListener('shown.bs.collapse', function () {
+      const slides = carousel.querySelectorAll('.carousel-item');
+      slides.forEach((slide, index) => {
+        if (slide.getAttribute('data-product') === slideKey) {
+          carouselInstance.to(index);
+        }
+      });
+    });
+  });
 });
 
-// Reset to middle if near ends
-scrollContainer.addEventListener('scroll', () => {
-  const scrollLeft = scrollContainer.scrollLeft;
-  const maxScroll = scrollContainer.scrollWidth;
-  const containerWidth = scrollContainer.clientWidth;
+// Contoh lazy-load video saat scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const videos = document.querySelectorAll('video[data-src]');
 
-  if (scrollLeft < 50) {
-    scrollContainer.scrollLeft = maxScroll / 2 - containerWidth;
-  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        if (!video.src) {
+          video.src = video.dataset.src;
+          video.load();
+          video.play();
+        }
+      }
+    });
+  }, { threshold: 0.5 });
 
-  if (scrollLeft + containerWidth > maxScroll - 50) {
-    scrollContainer.scrollLeft = maxScroll / 2 - containerWidth;
-  }
+  videos.forEach(video => observer.observe(video));
 });
