@@ -11,6 +11,72 @@ body {
   background-color: #FDFBF8 !important;
 }
 
+.frame {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(25%);
+  position: absolute;
+  border-radius: 0
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.judul {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.deskripsi {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 10px; /* sesuaikan jika ingin sedikit lebih naik */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: #4FC3F7;
+  text-decoration: none;
+  animation: bounce 2s infinite;
+  z-index: 10;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
 .custom-navbar {
   background: linear-gradient(to right, #4FC3F7, #81D4FA);
 }
@@ -82,7 +148,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* ubah 0.4 jadi lebih besar untuk lebih gelap */
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 
@@ -178,6 +244,6 @@ video {
 }
 
 section {
-  margin-bottom: 10rem;
+  margin-top: 10rem;
   overflow: visible;
 }

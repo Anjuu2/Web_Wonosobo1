@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
 </head>
 <body>
   <header>
@@ -23,54 +22,31 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
             <li class="nav-item"><a class="nav-link" href="#umkm">UMKM</a></li>
-            <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proker">Galeri</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-    <!-- <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div> -->
-    <div class="carousel-fixed-text position-absolute top-50 start-50 translate-middle text-white text-center z-2">
-      <h2>Selamat Datang di Dusun Wonosobo I</h2>
-      <p>Menggali potensi lokal dan memberdayakan UMKM desa</p>
+  <div class="frame">
+    <video autoplay muted loop playsinline>
+        <source src="assets\frame 2.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+    </video>
+    <div class="text-overlay">
+      <h1 class="judul">Wonosobo I</h1>
+      <p class="deskripsi">Wonosobo I merupakan salah satu dusun di Desa Banjarejo, Kecamatan Tanjungsari, Kabupaten Gunungkidul. Terletak di kawasan perbukitan yang sejuk dan asri, dusun ini dihuni oleh masyarakat yang menjunjung tinggi nilai kebersamaan dan kearifan lokal. Sebagian besar penduduk bermata pencaharian sebagai petani, peternak, dan pengrajin.
+        Selain itu, Padukuhan Wonosobo I juga memiliki potensi besar dalam pengembangan UMKM dan desa wisata, terutama karena lokasinya yang strategis dekat dengan jalur wisata pantai selatan. Kehidupan masyarakat yang harmonis serta kekayaan budaya dan alamnya menjadikan dusun ini sebagai salah satu potensi unggulan di wilayah Banjarejo.
+      </p>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/IMG_1775.jpg" class="d-block w-100" alt="...">
-        <div class="overlay"></div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets/IMG_1863.jpg" class="d-block w-100" alt="...">
-        <div class="overlay"></div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets/IMG_2121.jpg" class="d-block w-100" alt="...">
-        <div class="overlay"></div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span> -->
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span> -->
-    </button>
+    <a href="#map" class="arrow-down">
+      <i class="bi bi-chevron-compact-down"></i>
+    </a>
   </div>
 
-  <section id="profil" class="profil" data-aos="fade-up" data-aos-duration="1000">
-    <h2>Profil Padukuhan</h2>
-    <p>Padukuhan Wonosobo I merupakan salah satu dusun di Desa Banjarejo, Kecamatan Tanjungsari, Kabupaten Gunungkidul. Terletak di kawasan perbukitan yang sejuk dan asri, dusun ini dihuni oleh masyarakat yang menjunjung tinggi nilai kebersamaan dan kearifan lokal. Sebagian besar penduduk bermata pencaharian sebagai petani, peternak, dan pengrajin.
-      Selain itu, Padukuhan Wonosobo I juga memiliki potensi besar dalam pengembangan UMKM dan desa wisata, terutama karena lokasinya yang strategis dekat dengan jalur wisata pantai selatan. Kehidupan masyarakat yang harmonis serta kekayaan budaya dan alamnya menjadikan dusun ini sebagai salah satu potensi unggulan di wilayah Banjarejo.</p>
-  </section>
 
-  <section class="container" data-aos="fade-up">
+  <section class="container" id="map" data-aos="fade-up" data-aos-duration="1000">
     <h2 class="text-center mb-4">Lokasi Dusun Wonosobo I</h2>
     <div class="ratio ratio-16x9">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.612836359736!2d110.58463617482207!3d-8.111049291918107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bb1b7e85def01%3A0x76757d7fbc4e6ee3!2sBalai%20Padukuhan%20Wonosobo%20I!5e1!3m2!1sid!2sid!4v1753091230764!5m2!1sid!2sid"
@@ -124,7 +100,8 @@
       </div>
       <div class="col-md-6">
         <h3>Toko Pangestu</h3>
-        <p>Kopi robusta dan arabika asli dari petani lokal yang diolah secara tradisional.</p>
+        <p>Toko Pangestu berawal dari kecintaan kami terhadap kekayaan kuliner lokal dan keinginan untuk
+          menyajikannya dalam bentuk camilan yang praktis, higienis, dan lezat. Kami fokus pada pembuatan aneka keripik dan peyek dengan bahan-bahan unik yang diolah sepenuh hati.</p>
         
         <!-- Accordion Produk -->
         <div class="accordion" id="accordionUMKM1">
@@ -148,7 +125,7 @@
                     </h2>
                     <div id="nestedCollapse1a" class="accordion-collapse collapse" aria-labelledby="nestedHeading1a" data-bs-parent="#nestedAccordion1">
                       <div class="accordion-body">
-                        Kopi robusta dengan rasa kuat dan pahit khas, cocok untuk pecinta kopi hitam sejati.
+                        Rasakan renyahnya ikan wader asli dari perairan tawar yang bersih. Setiap ikan digoreng hingga garing sempurna, menciptakan sensasi kriuk yang tak terlupakan. Kaya akan kalsium, camilan ini sangat cocok sebagai teman ngobrol atau lauk pendamping nasi hangat.
                       </div>
                     </div>
                   </div>
@@ -162,7 +139,7 @@
                     </h2>
                     <div id="nestedCollapse1b" class="accordion-collapse collapse" aria-labelledby="nestedHeading1b" data-bs-parent="#nestedAccordion1">
                       <div class="accordion-body">
-                        Arabika pilihan dengan aroma khas dan tingkat keasaman seimbang, disangrai manual untuk menjaga cita rasa.
+                        Nikmati sensasi gurihnya lautan dalam setiap lembar Crispy Rumput Laut kami. Dibuat dari rumput laut pilihan berkualitas, diolah menjadi keripik super renyah dengan taburan bumbu yang pas. Camilan yang ringan, lezat, dan kaya akan serat.
                       </div>
                     </div>
                   </div>
@@ -176,7 +153,7 @@
                     </h2>
                     <div id="nestedCollapse1c" class="accordion-collapse collapse" aria-labelledby="nestedHeading1c" data-bs-parent="#nestedAccordion1">
                       <div class="accordion-body">
-                        Disajikan dalam kemasan kertas coklat khas pasar tradisional, menghadirkan rasa nostalgia.
+                        Camilan premium untuk Anda yang istimewa. Crispy Ikan Kakap kami terbuat dari daging ikan kakap pilihan yang diiris tipis dan diolah hingga renyah sempurna. Rasanya gurih, tidak amis, dan kaya akan protein. Pilihan cerdas untuk camilan yang lezat dan bernutrisi.
                       </div>
                     </div>
                   </div>
@@ -190,7 +167,7 @@
                     </h2>
                     <div id="nestedCollapse1d" class="accordion-collapse collapse" aria-labelledby="nestedHeading1d" data-bs-parent="#nestedAccordion1">
                       <div class="accordion-body">
-                        Paket menarik berisi 2 jenis kopi dan satu cangkir handmade dari keramik lokal.
+                        Berani coba yang beda? Peyek Undur-Undur kami adalah camilan langka dengan cita rasa yang benar-benar khas dan eksotis. Gurihnya undur-undur berpadu dengan adonan peyek yang renyah, menghadirkan pengalaman kuliner otentik yang tidak akan Anda temukan di tempat lain.
                       </div>
                     </div>
                   </div>
@@ -204,7 +181,7 @@
                     </h2>
                     <div id="nestedCollapse1e" class="accordion-collapse collapse" aria-labelledby="nestedHeading1e" data-bs-parent="#nestedAccordion1">
                       <div class="accordion-body">
-                        Paket menarik berisi 2 jenis kopi dan satu cangkir handmade dari keramik lokal.
+                        Nikmati aroma laut yang menggugah selera dari Peyek Rebon kami. Setiap gigitan dipenuhi dengan udang rebon segar yang memberikan rasa gurih mantap. Dipadu dengan adonan peyek yang tipis dan renyah, menjadikannya camilan favorit sepanjang masa.
                       </div>
                     </div>
                   </div>
@@ -216,7 +193,7 @@
           </div>
         </div>
 
-        <p class="mt-3 mb-0"><strong>Kontak:</strong></p>
+        <p class="mt-3 mb-0"><strong>Pesan Sekarang</strong></p>
         <strong><a href="https://wa.me/6282208243838" target="_blank" class="icon-link icon-hover">
           <i class="bi bi-whatsapp text-success"></i> 082208243838</a></strong>
       </div>
@@ -228,17 +205,36 @@
         <div id="carouselUMKM2" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="assets/IMG20250711152954.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
+              <img src="assets\Mentari\IMG_5660.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
             </div>
             <div class="carousel-item">
-              <img src="assets/IMG20250711153651.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
+              <img src="assets\Mentari\IMG_5656.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\Mentari\IMG_5655.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\Mentari\IMG_5633.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\Mentari\IMG20250711111910.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
+            </div>
+            <div class="carousel-item" data-product="tahu">
+              <img src="assets\Mentari\IMG_5777.PNG" class="d-block w-100 rounded" alt="Kerajinan Bambu">
+            </div>
+            <div class="carousel-item" data-product="naga">
+              <img src="assets\Mentari\IMG_5658.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
+            </div>
+            <div class="carousel-item" data-product="keripik">
+              <img src="assets\Mentari\IMG20250711111928.jpg" class="d-block w-100 rounded" alt="Kerajinan Bambu">
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <h3>Frozen Food</h3>
-        <p>Produk anyaman bambu seperti keranjang dan perabot rumah tangga.</p>
+        <h3>Rumah Produksi Mentari</h3>
+        <p>Rumah Produksi Mentari adalah produsen aneka makanan beku (frozen food) dan camilan berkualitas. Kami percaya bahwa makanan lezat berawal dari bahan baku terbaik.
+          Oleh karena itu, semua produk kami dibuat dengan cinta, menggunakan bahan-bahan segar pilihan dan diolah secara higienis tanpa bahan pengawet.</p>
 
         <!-- Accordion Produk -->
         <div class="accordion" id="accordionUMKM2">
@@ -254,68 +250,53 @@
                 <!-- Nested Accordion -->
                 <div class="accordion" id="nestedAccordion2">
                   <!-- Produk 1 -->
-                  <div class="accordion-item">
+                  <div class="accordion-item" data-target-slide="tahu">
                     <h2 class="accordion-header" id="nestedHeading2a">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nestedCollapse2a" aria-expanded="false" aria-controls="nestedCollapse2a">
-                        Kopi Robusta Bubuk 250g
+                        Tahu Bakso Ikan
                       </button>
                     </h2>
                     <div id="nestedCollapse2a" class="accordion-collapse collapse" aria-labelledby="nestedHeading2a" data-bs-parent="#nestedAccordion2">
                       <div class="accordion-body">
-                        Kopi robusta dengan rasa kuat dan pahit khas, cocok untuk pecinta kopi hitam sejati.
+                        Perpaduan sempurna antara tahu pilihan yang lembut di luar dengan isian bakso ikan segar yang gurih dan kenyal di dalam. Tahu Bakso Ikan Mentari sangat praktis, bisa langsung dikukus untuk sajian sehat atau digoreng untuk tekstur yang lebih renyah. Pilihan lauk bergizi dan lezat untuk seluruh keluarga.
                       </div>
                     </div>
                   </div>
 
                   <!-- Produk 2 -->
-                  <div class="accordion-item">
+                  <div class="accordion-item" data-target-slide="naga">
                     <h2 class="accordion-header" id="nestedHeading2b">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nestedCollapse2b" aria-expanded="false" aria-controls="nestedCollapse2b">
-                        Kopi Arabika Sangrai
+                        Kaki Naga
                       </button>
                     </h2>
                     <div id="nestedCollapse2b" class="accordion-collapse collapse" aria-labelledby="nestedHeading2b" data-bs-parent="#nestedAccordion2">
                       <div class="accordion-body">
-                        Arabika pilihan dengan aroma khas dan tingkat keasaman seimbang, disangrai manual untuk menjaga cita rasa.
+                        Camilan favorit si kecil yang selalu dinanti! Kaki Naga Mentari dibuat dari adonan ikan berkualitas, dibalut dengan tepung roti yang menciptakan sensasi renyah di luar namun tetap lembut dan gurih di dalam. Bentuknya yang unik membuatnya mudah dinikmati. Pilihan tepat untuk bekal sekolah atau lauk makan yang praktis.
                       </div>
                     </div>
                   </div>
 
                   <!-- Produk 3 -->
-                  <div class="accordion-item">
+                  <div class="accordion-item" data-target-slide="keripik">
                     <h2 class="accordion-header" id="nestedHeading2c">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nestedCollapse2c" aria-expanded="false" aria-controls="nestedCollapse2c">
-                        Kopi Tubruk Kemasan Tradisional
+                        Keripik Singkong
                       </button>
                     </h2>
                     <div id="nestedCollapse2c" class="accordion-collapse collapse" aria-labelledby="nestedHeading2c" data-bs-parent="#nestedAccordion2">
                       <div class="accordion-body">
-                        Disajikan dalam kemasan kertas coklat khas pasar tradisional, menghadirkan rasa nostalgia.
+                        Rasakan kriuk renyah dari setiap irisan Keripik Singkong Mentari! Kami menggunakan singkong berkualitas yang diiris super tipis, menghasilkan keripik yang garing dan tidak keras. Dengan taburan bumbu gurih yang merata, keripik ini dijamin membuat Anda tak bisa berhenti mengunyah. Teman sempurna untuk segala suasana.
                       </div>
                     </div>
                   </div>
-
-                  <!-- Produk 4 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="nestedHeading2d">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nestedCollapse2d" aria-expanded="false" aria-controls="nestedCollapse2d">
-                        Paket Gift Kopi + Cangkir
-                      </button>
-                    </h2>
-                    <div id="nestedCollapse2d" class="accordion-collapse collapse" aria-labelledby="nestedHeading2d" data-bs-parent="#nestedAccordion2">
-                      <div class="accordion-body">
-                        Paket menarik berisi 2 jenis kopi dan satu cangkir handmade dari keramik lokal.
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <!-- End Nested Accordion -->
 
               </div>
             </div>
           </div>
         </div>
-        <p class="mt-3 mb-0"><strong>Kontak:</strong></p>
+        <p class="mt-3 mb-0"><strong>Pesan Sekarang</strong></p>
         <strong><a href="https://wa.me/6282208243838" target="_blank" class="icon-link icon-hover">
           <i class="bi bi-whatsapp text-success"></i> 082208243838</a></strong>
         </p>
@@ -581,6 +562,47 @@
         </div>
       </div>
 
+      <div class="scroll-item">
+        <h5 class="text-center">Sosialisasi Hoax dan Keamanan Data Pribadi</h5>
+        <div class="proker-layout mt-4">
+          <!-- Carousel Kiri -->
+          <div id="carouselGroup1Left" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner proker-carousel">
+              <div class="carousel-item active">
+                <img src="assets\Proker Johan, Tesa dan Timo\IMG-20250715-WA0088.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets\Proker Johan, Tesa dan Timo\IMG-20250715-WA0076.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets\Proker Johan, Tesa dan Timo\IMG-20250715-WA0120.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Tengah -->
+          <video autoplay muted loop playsinline>
+            <source src="assets\Proker Johan, Tesa dan Timo\VID-20250715-WA0044.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video.
+          </video>
+
+          <!-- Carousel Kanan -->
+          <div id="carouselGroup1Right" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner proker-carousel">
+              <div class="carousel-item active">
+                <img src="assets\Proker Johan, Tesa dan Timo\IMG-20250715-WA0123.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets\Proker Johan, Tesa dan Timo\IMG-20250715-WA0124.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets\Proker Johan, Tesa dan Timo\IMG-20250715-WA0112.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -596,12 +618,12 @@
 
         <!-- Kolom 2: Kontak -->
         <div class="col-md-4 mb-2">
-          <h5>Kontak</h5>
+          <!-- <h5>Kontak</h5>
           <ul class="list-unstyled">
             <li><i class="bi bi-geo-alt-fill me-2"></i> Desa Contoh, Kecamatan X</li>
             <li><i class="bi bi-envelope-fill me-2"></i> dusunwonosobo1@gmail.com</li>
             <li><i class="bi bi-whatsapp me-2"></i> <a href="https://wa.me/6281234567890" class="text-dark text-decoration-none">+62 812-3456-7890</a></li>
-          </ul>
+          </ul> -->
         </div>
 
         <!-- Kolom 3: Sosial Media -->

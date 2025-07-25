@@ -1,17 +1,13 @@
 AOS.init();
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Landing page Dusun Wonosobo 1 siap digunakan.");
-});
-
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".custom-navbar");
-  const carousel = document.querySelector("#carouselExampleAutoplaying");
+  const frame = document.querySelector(".frame");
 
   // Dapatkan posisi bagian bawah carousel relatif terhadap viewport
-  const carouselBottom = carousel.getBoundingClientRect().bottom-70;
+  const frameBottom = frame.getBoundingClientRect().bottom-70;
 
-  if (carouselBottom <= 0) {
+  if (frameBottom <= 0) {
     // Jika carousel sudah sepenuhnya lewat, ubah navbar jadi transparan
     navbar.classList.add("transparent");
   } else {
@@ -26,6 +22,27 @@ document.addEventListener('DOMContentLoaded', function () {
   const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
 
   const accordionItems = document.querySelectorAll('#nestedAccordion1 .accordion-item');
+
+  accordionItems.forEach(item => {
+    const slideKey = item.getAttribute('data-target-slide');
+    const collapse = item.querySelector('.accordion-collapse');
+
+    collapse.addEventListener('shown.bs.collapse', function () {
+      const slides = carousel.querySelectorAll('.carousel-item');
+      slides.forEach((slide, index) => {
+        if (slide.getAttribute('data-product') === slideKey) {
+          carouselInstance.to(index);
+        }
+      });
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('#carouselUMKM2');
+  const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
+
+  const accordionItems = document.querySelectorAll('#nestedAccordion2 .accordion-item');
 
   accordionItems.forEach(item => {
     const slideKey = item.getAttribute('data-target-slide');
