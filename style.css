@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -40,6 +40,7 @@ body {
   text-align: center;
   color: white;
   padding: 20px;
+  width: 90%; /* Added to prevent text from touching edges on mobile */
 }
 
 .judul {
@@ -79,6 +80,7 @@ body {
 
 .custom-navbar {
   background: linear-gradient(to right, #4FC3F7, #81D4FA);
+  transition: background-color 0.4s ease-in-out;
 }
 
 .custom-navbar.transparent {
@@ -114,6 +116,14 @@ body {
   max-width: 95vw;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.umkm-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .umkm-list {
@@ -167,12 +177,6 @@ footer {
 .umkm img {
   height: 300px;
   object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .umkm img {
-    height: 200px;
-  }
 }
 
 .icon-link {
@@ -247,3 +251,56 @@ section {
   margin-top: 10rem;
   overflow: visible;
 }
+
+/* --- START: MOBILE OPTIMIZATION --- */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px; /* Adjust for smaller navbar */
+  }
+
+  .judul {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .deskripsi {
+    font-size: 0.9rem; /* Reduce description font size */
+  }
+  
+  section {
+    margin-top: 4rem; /* Reduce top margin for sections */
+  }
+
+  .profil {
+    margin-top: 4rem; /* Reduce top margin for profil section */
+    margin-bottom: 3rem;
+  }
+
+  .umkm img {
+    height: 200px;
+  }
+  
+  .umkm-card {
+    padding: 1rem; /* Reduce padding inside UMKM cards */
+  }
+  
+  .proker-layout {
+    grid-template-columns: 1fr; /* Stack the gallery items in a single column */
+    gap: 1.5rem; /* Add some space between stacked items */
+  }
+  
+  .proker-carousel img, video {
+    height: auto; /* Let height adjust to aspect ratio */
+    max-height: 300px; /* Limit max height to avoid taking too much space */
+  }
+
+  .scroll-section {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  footer .col-md-4 {
+    text-align: center; /* Center footer content */
+    margin-bottom: 1.5rem; /* Add space between stacked footer columns */
+  }
+}
+/* --- END: MOBILE OPTIMIZATION --- */
