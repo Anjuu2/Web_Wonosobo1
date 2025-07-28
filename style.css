@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -40,6 +40,7 @@ body {
   text-align: center;
   color: white;
   padding: 20px;
+  width: 90%; /* Added to prevent text from touching edges on mobile */
 }
 
 .judul {
@@ -79,6 +80,7 @@ body {
 
 .custom-navbar {
   background: linear-gradient(to right, #4FC3F7, #81D4FA);
+  transition: background-color 0.4s ease-in-out;
 }
 
 .custom-navbar.transparent {
@@ -114,6 +116,20 @@ body {
   max-width: 95vw;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.umkm-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.umkm-card:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .umkm-list {
@@ -152,27 +168,9 @@ footer {
   z-index: 1;
 }
 
-#carouselExampleAutoplaying::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px; /* tinggi area blur */
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(253,251,248,1) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
 .umkm img {
   height: 300px;
   object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .umkm img {
-    height: 200px;
-  }
 }
 
 .icon-link {
@@ -197,7 +195,7 @@ footer {
 }
 
 .scroll-item {
-  flex: 0 0 100%; /* Full width per item */
+  flex: 0 0 100%;
   scroll-snap-align: start;
   padding: 2rem;
   box-sizing: border-box;
@@ -246,4 +244,51 @@ video {
 section {
   margin-top: 10rem;
   overflow: visible;
+}
+
+/* --- START: MOBILE OPTIMIZATION --- */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  .judul {
+    font-size: 2rem;
+  }
+
+  .deskripsi {
+    font-size: 0.8rem;
+  }
+
+  .umkm img {
+    height: 200px;
+  }
+  
+  .umkm-card {
+    padding: 1rem;
+  }
+
+  .umkm-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .proker-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .proker-carousel img, .proker-carousel video {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .scroll-section {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  footer .col-md-4 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
 }
