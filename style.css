@@ -118,6 +118,29 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* --- START: PROFIL DUKUH --- */
+.profil-dukuh .card {
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.profil-dukuh .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.profil-dukuh-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid #EADDBB;
+}
+/* --- END: PROFIL DUKUH --- */
+
+
 .umkm-card {
   background-color: #ffffff;
   border-radius: 15px;
@@ -246,6 +269,52 @@ section {
   overflow: visible;
 }
 
+/* --- Statistik Bar --- */
+.stats-bar {
+  padding: 3rem 0;
+  background: linear-gradient(to right, #4FC3F7, #81D4FA); /* Warna sama dengan navbar */
+  color: white;
+}
+
+.stats-item {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Menambahkan spasi bawah untuk tampilan mobile */
+}
+
+.stats-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem auto;
+  background-color: rgba(255, 255, 255, 0.2); /* Lingkaran transparan */
+  border-radius: 50%; /* Membuatnya menjadi lingkaran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.stats-icon:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Sedikit lebih terang saat di-hover */
+}
+
+.stats-icon i {
+  font-size: 2.5rem; /* Ukuran ikon di dalam lingkaran */
+  color: #ffffff;
+}
+
+.stats-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.stats-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
 /* --- START: MOBILE OPTIMIZATION --- */
 @media (max-width: 768px) {
   html {
@@ -258,6 +327,20 @@ section {
 
   .deskripsi {
     font-size: 0.8rem;
+  }
+
+  .profil-dukuh .col-md-8 {
+    text-align: center;
+  }
+
+  .profil-dukuh-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .stats-item {
+    margin-bottom: 0;
   }
 
   .umkm img {
